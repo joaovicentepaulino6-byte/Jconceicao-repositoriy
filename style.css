@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --escuro: #101827;
+  --laranja: #f47721;
+  --texto: #4b5563;
+  --claro: #f5f7fa;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--escuro);
+  line-height: 1.7;
+  background: #ffffff;
+}
+
+.cabecalho {
+  min-height: 76px;
+  padding: 16px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--escuro);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.logo span { color: var(--laranja); }
+
+.navegacao {
+  display: flex;
+  gap: 28px;
+}
+
+.navegacao a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .25s ease;
+}
+
+.navegacao a:hover { color: var(--laranja); }
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  color: white;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.inicio {
+  min-height: 610px;
+  padding: 70px 10%;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 35px;
+  background: linear-gradient(120deg, #f5f7fa 60%, #fff0e5 60%);
+}
+
+.etiqueta {
+  color: var(--laranja);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.apresentacao h1 {
+  margin: 12px 0 4px;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.15;
+}
+
+.apresentacao h1 span { color: var(--laranja); }
+
+.apresentacao h2 {
+  margin-bottom: 18px;
+  font-size: 1.35rem;
+}
+
+.apresentacao p:not(.etiqueta) {
+  max-width: 570px;
+  color: var(--texto);
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+.botao {
+  padding: 11px 19px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform .25s ease, background .25s ease;
+}
+
+.botao:hover { transform: translateY(-3px); }
+.principal { color: white; background: var(--laranja); }
+.principal:hover { background: #d95e0d; }
+.secundario { color: var(--escuro); border: 1px solid var(--escuro); }
+
+.foto-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-circulo {
+  width: min(360px, 82vw);
+  height: min(360px, 82vw);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #ffe0c8;
+  border: 8px solid white;
+  box-shadow: 0 15px 45px rgba(16, 24, 39, .15);
+}
+
+.foto-circulo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  transition: transform .35s ease;
+}
+
+.foto-circulo:hover img { transform: scale(1.04); }
+
+.secao {
+  padding: 85px 10%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.secao h2 {
+  margin: 5px 0 18px;
+  font-size: 2rem;
+}
+
+.secao > p:not(.etiqueta) {
+  max-width: 850px;
+  color: var(--texto);
+}
+
+.competencias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.competencias span, .tecnologia {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 20px;
+  color: #a94308;
+  background: #fff0e5;
+  font-size: .88rem;
+  font-weight: 700;
+}
+
+#projetos { max-width: none; background: var(--claro); }
+#projetos > * { max-width: 1040px; margin-left: auto; margin-right: auto; }
+
+.projectos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 28px !important;
+}
+
+.projecto {
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 6px 22px rgba(16, 24, 39, .06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.projecto:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 28px rgba(16, 24, 39, .12);
+}
+
+.projecto-icone {
+  color: var(--laranja);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.projecto h3 { margin: 8px 0; }
+.projecto p { min-height: 78px; color: var(--texto); margin-bottom: 15px; }
+.contacto { padding-top: 75px; padding-bottom: 75px; }
+.contacto p { margin: 8px 0; }
+
+footer {
+  padding: 22px;
+  text-align: center;
+  color: white;
+  background: var(--escuro);
+}
+
+@media (max-width: 760px) {
+  .cabecalho { padding: 14px 6%; }
+  .menu-toggle { display: block; }
+  .navegacao {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 20px 6%;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--escuro);
+  }
+  .navegacao.aberto { display: flex; }
+  .inicio {
+    padding: 55px 7%;
+    grid-template-columns: 1fr;
+    text-align: center;
+    background: linear-gradient(180deg, #f5f7fa 65%, #fff0e5 65%);
+  }
+  .apresentacao p:not(.etiqueta) { margin: auto; }
+  .botoes { justify-content: center; }
+  .foto-area { grid-row: 1; }
+  .foto-circulo { width: 260px; height: 260px; }
+  .secao { padding: 65px 7%; }
+  .projectos { grid-template-columns: 1fr; }
+  .projecto p { min-height: auto; }
+}
+
+/* ---------- Seletor de idioma ---------- */
+.idioma {
+  display: flex;
+  gap: 4px;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 20px;
+}
+
+.idioma-botao {
+  padding: 3px 11px;
+  border: 0;
+  border-radius: 16px;
+  color: white;
+  background: transparent;
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease;
+}
+
+.idioma-botao:hover { color: var(--laranja); }
+.idioma-botao.activo { color: white; background: var(--laranja); }
+.idioma-botao.activo:hover { color: white; }
+
+/* ---------- Imagens dos projectos ---------- */
+.projecto {
+  padding: 0;
+  overflow: hidden;
+}
+
+.projecto-imagem {
+  overflow: hidden;
+  aspect-ratio: 5 / 3;
+  background: var(--claro);
+}
+
+.projecto-imagem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.projecto:hover .projecto-imagem img { transform: scale(1.08); }
+.projecto-corpo { padding: 22px 25px 25px; }
+
+/* ---------- Contactos e redes sociais ---------- */
+.contacto a:not(.rede) {
+  color: #a94308;
+  text-decoration: none;
+  transition: color .25s ease;
+}
+
+.contacto a:not(.rede):hover { color: var(--laranja); }
+.redes-titulo { margin-top: 20px !important; }
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.rede {
+  padding: 9px 18px;
+  border-radius: 7px;
+  color: white;
+  background: var(--escuro);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform .25s ease, background .25s ease;
+}
+
+.rede:hover { background: var(--laranja); transform: translateY(-3px); }
+
+@media (max-width: 760px) {
+  .idioma { align-self: flex-start; }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio pessoal de estudante de suporte informático e desenvolvimento web.">
+    <title>João da Conceição Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="#inicio">Meu<span>Portfólio</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <nav class="navegacao" id="navegacao">
+            <a href="#inicio" data-i18n="nav_inicio">Início</a>
+            <a href="#sobre" data-i18n="nav_sobre">Sobre mim</a>
+            <a href="#projetos" data-i18n="nav_projectos">Projectos</a>
+            <a href="#contactos" data-i18n="nav_contactos">Contactos</a>
+            <div class="idioma" role="group" aria-label="Idioma / Language">
+                <button type="button" class="idioma-botao activo" data-lang="pt" aria-pressed="true">PT</button>
+                <button type="button" class="idioma-botao" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="inicio" id="inicio">
+            <div class="apresentacao">
+                <p class="etiqueta" data-i18n="etiqueta_inicio">PORTFÓLIO PESSOAL</p>
+                <h1><span data-i18n="ola">Olá, sou</span> <span>João da Conceição</span></h1>
+                <h2 data-i18n="cargo">Desenvolvedor Web</h2>
+                <p data-i18n="descricao">Tenho interesse por tecnologia, informática e desenvolvimento de páginas web. Estou a desenvolver as minhas competências em HTML e CSS.</p>
+                <div class="botoes">
+                    <a class="botao principal" href="#projetos" data-i18n="ver_projectos">Ver projectos</a>
+                    <a class="botao secundario" href="#contactos" data-i18n="entrar_contacto">Entrar em contacto</a>
+                </div>
+            </div>
+            <div class="foto-area">
+                <div class="foto-circulo">
+                    <img src="minha-foto.png" alt="Fotografia de João da Conceição" data-i18n-alt="alt_foto">
+                </div>
+            </div>
+        </section>
+
+        <section class="secao" id="sobre">
+            <p class="etiqueta" data-i18n="etiqueta_sobre">QUEM SOU</p>
+            <h2 data-i18n="titulo_sobre">Sobre mim</h2>
+            <p data-i18n="texto_sobre">Sou estudante da área de Suporte Informático. Tenho interesse em aprender, resolver problemas tecnológicos e criar soluções digitais. Actualmente, estou a praticar a construção de páginas web usando HTML, JavaScript e CSS.</p>
+            <div class="competencias">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="comp_suporte">Suporte Informático</span><span data-i18n="comp_manutencao">Manutenção de computadores</span>
+            </div>
+        </section>
+
+        <section class="secao" id="projetos">
+            <p class="etiqueta" data-i18n="etiqueta_projectos">O MEU TRABALHO</p>
+            <h2 data-i18n="titulo_projectos">Portfólio de projectos</h2>
+            <div class="projectos">
+                <article class="projecto">
+                    <div class="projecto-imagem">
+                        <img src="Portal-imagem.png" alt="Ilustração de um portal" data-i18n-alt="alt_p1" loading="lazy">
+                    </div>
+                    <div class="projecto-corpo">
+                        <div class="projecto-icone">01</div>
+                        <h3 data-i18n="p1_titulo">Portal Institucional</h3>
+                        <p data-i18n="p1_desc">Desenvolvimento de um portal do iicaeg.</p>
+                        <span class="tecnologia">HTML · CSS. JS</span>
+                    </div>
+                </article>
+                <article class="projecto">
+                    <div class="projecto-imagem">
+                        <img src="imagem2.png" alt="Ilustração do portfólio pessoal" data-i18n-alt="alt_p2" loading="lazy">
+                    </div>
+                    <div class="projecto-corpo">
+                        <div class="projecto-icone">02</div>
+                        <h3 data-i18n="p2_titulo">Portfólio Pessoal</h3>
+                        <p data-i18n="p2_desc">Este website apresenta a minha biografia, competências, projectos e contactos.</p>
+                        <span class="tecnologia">HTML · CSS · JavaScript</span>
+                    </div>
+                </article>
+                <article class="projecto">
+                    <div class="projecto-imagem">
+                        <img src="imagem3.png" alt="Ilustração de assistência tecnológica" data-i18n-alt="alt_p3" loading="lazy">
+                    </div>
+                    <div class="projecto-corpo">
+                        <div class="projecto-icone">03</div>
+                        <h3 data-i18n="p3_titulo">Assistência Tecnológica</h3>
+                        <p data-i18n="p3_desc">Website para apresentar serviços de suporte e manutenção informática.</p>
+                        <span class="tecnologia" data-i18n="p3_estado">Hardware e Software</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao contacto" id="contactos">
+            <p class="etiqueta" data-i18n="etiqueta_contactos">VAMOS CONVERSAR</p>
+            <h2 data-i18n="titulo_contactos">Contactos</h2>
+            <p data-i18n="texto_contactos">Podes entrar em contacto comigo através dos seguintes meios:</p>
+            <p><strong>Email:</strong> <a href="mailto:joaovicentepaulino6@gmail.com">joaovicentepaulino6@gmail.com</a></p>
+            <p><strong data-i18n="telefone">Telefone:</strong> <a href="tel:+258844470834">+258 844470834</a></p>
+            <p><strong data-i18n="localizacao">Localização:</strong> <span data-i18n="pais"> Maputo-Moçambique</span></p>
+
+            <p class="redes-titulo"><strong data-i18n="redes">Redes sociais:</strong></p>
+            <div class="redes">
+                <a class="rede" href="https://wa.me/258844470834" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="rede" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="rede" href="https:www.facebook.com/joaovicente.paulino" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="ano"></span> João da Conceição. <span data-i18n="rodape">Todos os direitos reservados.</span></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
